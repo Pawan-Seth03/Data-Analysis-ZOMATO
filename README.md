@@ -75,7 +75,6 @@ SET total_amount = COALESCE(total_amount, 0);
 **Approach 1:**
 
 ```sql
--- Approach 1
 SELECT 
 	FLOOR(EXTRACT(HOUR FROM order_time)/2)*2 as start_time,
 	FLOOR(EXTRACT(HOUR FROM order_time)/2)*2 + 2 as end_time,
@@ -86,7 +85,8 @@ ORDER BY 3 DESC;
 ```
 
 ## Business Problems
-Q.1 Write a query to find the top 5 most frequently ordered dishes by customer called "Arjun Mehta" in the last 1 year.
+
+Q.1 Write a query to find the top 5 most frequently ordered dishes by customer called `Arjun Mehta` in the last 1 year.
 Q.2 Popular Time Slots - Identify the time slots during which the most orders are placed. based on 2-hour intervals.
 Q.3 Order Value Analysis - Find the average order value per customer who has placed more than 750 orders.
 Q.4 High-Value Customers - Question: List the customers who have spent more than 100K in total on food orders.
